@@ -48,6 +48,7 @@ label.l{font-size:12px;font-weight:700;color:var(--g);text-transform:uppercase;l
 <header>
   <div class="brand"><svg viewBox="0 0 48 48" width="22" height="22"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="5"/><rect x="21.5" y="9" width="5" height="30" fill="currentColor"/></svg>CIRCULAR<b>IT</b>Y <span style="font-weight:500;letter-spacing:0;color:#bbb">&nbsp;Photos</span></div>
   <div class="ids" id="ids"></div>
+  <div class="ids" id="cloud"></div>
   <div class="prog"><i id="prog"></i></div>
 </header>
 <main id="main"></main>
@@ -56,7 +57,7 @@ label.l{font-size:12px;font-weight:700;color:var(--g);text-transform:uppercase;l
 <input type="file" accept="image/*" multiple id="galIn" class="hidden">
 <script>
 "use strict";
-const CONF = {"sections": [{"key": "label", "title": "Serial / model label", "guide": "Flip the laptop. Close-up of the service tag / serial sticker so the text is sharp and readable.", "max_photos": 10}, {"key": "lid", "title": "Lid (A side)", "guide": "Laptop closed, lid facing up. Full lid in frame, then close-ups of any scratches or dents.", "max_photos": 10}, {"key": "screen", "title": "Screen & bezel (B side)", "guide": "Screen ON showing the white test screen. Straight-on shot, then angled shot to reveal scratches or pressure marks.", "max_photos": 10}, {"key": "keyboard", "title": "Keyboard & palm rest (C side)", "guide": "Laptop open flat. Whole keyboard + palm rest from above. Close-ups of worn or missing keys.", "max_photos": 10}, {"key": "touchpad", "title": "Touchpad", "guide": "Close-up of the touchpad and buttons.", "max_photos": 10}, {"key": "bottom", "title": "Bottom cover (D side)", "guide": "Laptop upside down on a soft cloth. Whole bottom; show screws and rubber feet.", "max_photos": 10}, {"key": "ports_left", "title": "Left side & ports", "guide": "Left edge straight-on so every port is visible.", "max_photos": 10}, {"key": "ports_right", "title": "Right side & ports", "guide": "Right edge straight-on so every port is visible.", "max_photos": 10}, {"key": "front_rear", "title": "Front & rear edges", "guide": "Front edge, then rear edge (hinge side).", "max_photos": 10}, {"key": "hinges", "title": "Hinges", "guide": "Close-up of both hinges with the lid at about 90 degrees.", "max_photos": 10}, {"key": "vents", "title": "Vents & exhaust", "guide": "Intake and exhaust grilles. Show dust build-up if any.", "max_photos": 10}, {"key": "adapter", "title": "Power adapter & cable", "guide": "Adapter with cable, then close-up of the adapter label (wattage / part number).", "max_photos": 10}, {"key": "damage", "title": "Damage close-ups", "guide": "Any cracks, dents, liquid marks or broken parts not already captured. Skip if none.", "max_photos": 10}, {"key": "accessories", "title": "Accessories / other", "guide": "Bag, box, docking station, stylus or anything else received with the unit.", "max_photos": 10}], "skip_reasons": ["Not applicable to this device", "Not present", "No issue to show", "Will add later", "Other"], "max_dimension": 2560, "jpeg_quality": 0.85, "company": "Circularity by Innomonk Technologies", "generated": "2026-09-28 14:05"} || {sections:[{key:"label",title:"Serial / model label",guide:"Close-up of the serial sticker."}],skip_reasons:["Not applicable","Other"],max_dimension:2560,jpeg_quality:.85,company:"Circularity"};
+const CONF = {"sections": [{"key": "label", "title": "Serial / model label", "guide": "Flip the laptop. Close-up of the service tag / serial sticker so the text is sharp and readable.", "max_photos": 10}, {"key": "lid", "title": "Lid (A side)", "guide": "Laptop closed, lid facing up. Full lid in frame, then close-ups of any scratches or dents.", "max_photos": 10}, {"key": "screen", "title": "Screen & bezel (B side)", "guide": "Screen ON showing the white test screen. Straight-on shot, then angled shot to reveal scratches or pressure marks.", "max_photos": 10}, {"key": "keyboard", "title": "Keyboard & palm rest (C side)", "guide": "Laptop open flat. Whole keyboard + palm rest from above. Close-ups of worn or missing keys.", "max_photos": 10}, {"key": "touchpad", "title": "Touchpad", "guide": "Close-up of the touchpad and buttons.", "max_photos": 10}, {"key": "bottom", "title": "Bottom cover (D side)", "guide": "Laptop upside down on a soft cloth. Whole bottom; show screws and rubber feet.", "max_photos": 10}, {"key": "ports_left", "title": "Left side & ports", "guide": "Left edge straight-on so every port is visible.", "max_photos": 10}, {"key": "ports_right", "title": "Right side & ports", "guide": "Right edge straight-on so every port is visible.", "max_photos": 10}, {"key": "front_rear", "title": "Front & rear edges", "guide": "Front edge, then rear edge (hinge side).", "max_photos": 10}, {"key": "hinges", "title": "Hinges", "guide": "Close-up of both hinges with the lid at about 90 degrees.", "max_photos": 10}, {"key": "vents", "title": "Vents & exhaust", "guide": "Intake and exhaust grilles. Show dust build-up if any.", "max_photos": 10}, {"key": "adapter", "title": "Power adapter & cable", "guide": "Adapter with cable, then close-up of the adapter label (wattage / part number).", "max_photos": 10}, {"key": "damage", "title": "Damage close-ups", "guide": "Any cracks, dents, liquid marks or broken parts not already captured. Skip if none.", "max_photos": 10}, {"key": "accessories", "title": "Accessories / other", "guide": "Bag, box, docking station, stylus or anything else received with the unit.", "max_photos": 10}], "skip_reasons": ["Not applicable to this device", "Not present", "No issue to show", "Will add later", "Other"], "max_dimension": 2560, "jpeg_quality": 0.85, "company": "Circularity by Innomonk Technologies", "generated": "2026-10-16 10:26", "m365": {"client_id": "f55ace1f-5d6f-46d1-8fa6-42d16dcecc18", "tenant_id": "3e025c82-1293-4082-a6ab-bd11b4f06ede", "site_url": "https://innomonk.sharepoint.com/sites/DeviceAssessments", "library": "Documents", "root_folder": "Device Assessments"}} || {sections:[{key:"label",title:"Serial / model label",guide:"Close-up of the serial sticker."}],skip_reasons:["Not applicable","Other"],max_dimension:2560,jpeg_quality:.85,company:"Circularity"};
 const $=(s,e=document)=>e.querySelector(s), esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const SECS=CONF.sections; const MAX=s=>s.max_photos||10;
 let A=null; // {id, sn, m, t}
@@ -99,6 +100,7 @@ async function makeZip(files){ // files: [{name, data:Uint8Array}]
 function header(){
   $("#ids").innerHTML=A?`<strong>${esc(A.id)}</strong> · S/N <strong>${esc(A.sn||"—")}</strong> · ${esc(A.m||"")}`:"Not linked to an assessment";
   $("#prog").style.width=A?(100*doneCount()/SECS.length)+"%":"0";
+  showCloud();
 }
 function render(){header();const m=$("#main");$("#bar").classList.toggle("hidden",view!=="section");
   if(view==="intro")return renderIntro(m);if(view==="section")return renderSection(m);if(view==="list")return renderList(m);if(view==="finish")return renderFinish(m)}
@@ -127,9 +129,9 @@ async function renderSection(m){
     <label class="l">Notes (optional)</label><textarea id="notes" placeholder="e.g. dent near left hinge">${esc(e.notes||"")}</textarea></div>`;
   const th=$("#th");
   for(const p of e.photos){const b=await getPhoto(p.id);if(!b)continue;const u=URL.createObjectURL(b);const d=document.createElement("div");d.innerHTML=`<img src="${u}"><button aria-label="Delete">×</button>`;
-    d.querySelector("button").onclick=async()=>{if(!confirm("Delete this photo?"))return;e.photos=e.photos.filter(x=>x.id!==p.id);await delPhoto(p.id);await saveState();render()};th.appendChild(d)}
+    d.querySelector("button").onclick=async()=>{if(!confirm("Delete this photo?"))return;e.photos=e.photos.filter(x=>x.id!==p.id);await delPhoto(p.id);if(p.cloud)cloudDelete(p.cloud);await saveState();render();cloudSync(false)};th.appendChild(d)}
   $("#cam").onclick=()=>$("#camIn").click();$("#gal").onclick=()=>$("#galIn").click();
-  const sk=$("#skip");if(sk)sk.onclick=async()=>{e.skipped=true;e.skip_reason=$("#skr").value;await saveState();toast("Section skipped");next()};
+  const sk=$("#skip");if(sk)sk.onclick=async()=>{e.skipped=true;e.skip_reason=$("#skr").value;await saveState();toast("Section skipped");next();cloudSync(false)};
   const us=$("#unskip");if(us)us.onclick=async ev=>{ev.preventDefault();e.skipped=false;e.skip_reason=null;await saveState();render()};
   $("#notes").onchange=async ev=>{e.notes=ev.target.value;await saveState()};
   $("#prev").disabled=idx===0;$("#next").textContent=idx===SECS.length-1?"Finish ›":"Next ›";
@@ -137,8 +139,8 @@ async function renderSection(m){
 async function addFiles(files){
   const s=SECS[idx];const e=sec(s.key);let added=0;
   for(const f of files){if(e.photos.length>=MAX(s)){toast(`Maximum ${MAX(s)} photos for this section`);break}
-    busy(true,"Saving photo…");try{const b=await resize(f);const id=`${A.id}|${s.key}|${Date.now()}|${Math.random().toString(36).slice(2,7)}`;await putPhoto(id,b);e.photos.push({id,taken_at:new Date().toISOString(),bytes:b.size});e.skipped=false;e.skip_reason=null;added++}catch(err){toast(err.message)}}
-  busy(false);await saveState();if(added)toast(`${added} photo${added>1?"s":""} added`);render();
+    busy(true,"Saving photo…");try{const b=await resize(f);const id=`${A.id}|${s.key}|${Date.now()}|${Math.random().toString(36).slice(2,7)}`;await putPhoto(id,b);e.n=(e.n||e.photos.length)+1;e.photos.push({id,n:e.n,taken_at:new Date().toISOString(),bytes:b.size});e.skipped=false;e.skip_reason=null;added++}catch(err){toast(err.message)}}
+  busy(false);await saveState();if(added)toast(`${added} photo${added>1?"s":""} added`);render();cloudSync(false);
 }
 $("#camIn").onchange=ev=>{addFiles([...ev.target.files]);ev.target.value=""};
 $("#galIn").onchange=ev=>{addFiles([...ev.target.files]);ev.target.value=""};
@@ -155,17 +157,22 @@ function renderFinish(m){
   const total=SECS.reduce((a,s)=>a+((D.sections[s.key]||{photos:[]}).photos.length),0);
   m.innerHTML=`<div class="card"><h1>Finish & send</h1><p class="guide"><strong>${total}</strong> photos in ${SECS.length-missing.length} of ${SECS.length} sections.</p>
     ${missing.length?`<div class="skipped">Not done: ${missing.map(s=>esc(s.title)).join(", ")}. They will be marked "missing" - you can send another ZIP later.</div>`:""}
-    <button class="btn primary" id="share">📤 Create ZIP & Share</button><button class="btn" id="dl">⬇ Save ZIP to phone</button>
-    <p class="count" style="margin-top:12px">Share to the <strong>Circularity Photos</strong> folder (Google Drive / OneDrive) - the assessment tool imports it automatically. Or save it and copy it to the laptop by cable.</p>
+    ${M365ON?`<button class="btn primary" id="submit">☁ Submit to SharePoint</button><div class="count" id="subMsg" style="margin-top:6px">${esc(cloudLine())}</div>
+      <p class="count" style="margin-top:12px">Photos go straight into the device's folder on SharePoint; the assessment tool picks them up from there. If the phone is offline they upload as soon as it is back online - keep this page open.</p>
+      <details style="margin-top:8px"><summary class="count">No SharePoint? Send a ZIP instead</summary><button class="btn" id="share">📤 Create ZIP & Share</button><button class="btn" id="dl">⬇ Save ZIP to phone</button></details>`
+    :`<button class="btn primary" id="share">📤 Create ZIP & Share</button><button class="btn" id="dl">⬇ Save ZIP to phone</button>
+    <p class="count" style="margin-top:12px">Share to the <strong>Circularity Photos</strong> folder (Google Drive / OneDrive) - the assessment tool imports it automatically. Or save it and copy it to the laptop by cable.</p>`}
     <button class="btn ghost" id="back">‹ Back to sections</button></div>
     <div class="card"><button class="btn ghost" id="newL">Done - clear this phone for the next laptop</button></div>`;
   $("#share").onclick=()=>send(true);$("#dl").onclick=()=>send(false);$("#back").onclick=()=>{view="list";render()};
-  $("#newL").onclick=async()=>{if(!confirm("Clear all photos of "+A.id+" from this phone? Only do this after the ZIP has been sent."))return;for(const s of SECS)for(const p of (D.sections[s.key]||{photos:[]}).photos)await delPhoto(p.id);await tx("state","readwrite",st=>st.delete("cur:"+A.id));A=null;D={sections:{}};history.replaceState(null,"",location.pathname);view="intro";render()};
+  const sb=$("#submit");if(sb)sb.onclick=async()=>{sb.disabled=true;D.submitted=true;await saveState();const ok=await cloudSync(true);sb.disabled=false;
+    $("#subMsg").textContent=cloudLine();if(ok)toast("Submitted to SharePoint");};
+  $("#newL").onclick=async()=>{const pend=cloudPending();if(!confirm(pend?`${pend} photo(s) are NOT on SharePoint yet. Clear this phone anyway?`:"Clear all photos of "+A.id+" from this phone?"))return;for(const s of SECS)for(const p of (D.sections[s.key]||{photos:[]}).photos)await delPhoto(p.id);await tx("state","readwrite",st=>st.delete("cur:"+A.id));A=null;D={sections:{}};history.replaceState(null,"",location.pathname);view="intro";render()};
 }
 async function buildZip(){
   busy(true,"Building ZIP…");const files=[];const man={format:"circularity-photos/1",assessment_id:A.id,serial:A.sn,model:A.m,technician:A.t,created_at:new Date().toISOString(),device:navigator.userAgent,sections:[]};
   let si=0;for(const s of SECS){si++;const e=D.sections[s.key]||{photos:[]};const ms={key:s.key,title:s.title,skipped:!!e.skipped&&!e.photos.length,skip_reason:e.skip_reason,notes:e.notes||"",files:[]};
-    let k=0;for(const p of e.photos){const b=await getPhoto(p.id);if(!b)continue;k++;const name=`photos/${String(si).padStart(2,"0")}_${s.key}/${A.id}_${s.key}_${String(k).padStart(2,"0")}.jpg`;
+    let k=0;for(const p of e.photos){const b=await getPhoto(p.id);if(!b)continue;k++;const name=photoPath(si,s.key,p.n||k);
       files.push({name,data:new Uint8Array(await b.arrayBuffer())});ms.files.push({name:name.split("/").pop(),path:name,taken_at:p.taken_at,bytes:b.size})}
     man.sections.push(ms)}
   files.unshift({name:"manifest.json",data:new TextEncoder().encode(JSON.stringify(man,null,1))});
@@ -176,10 +183,55 @@ async function send(share){
   if(share&&navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:f.name,text:`Circularity photos ${A.id}`});toast("Shared");return}catch(e){if(e.name==="AbortError")return}}
   const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();a.remove();toast(share?"Sharing not supported - ZIP saved instead":"ZIP saved to Downloads");
 }
+/* ---------------- SharePoint (Microsoft 365) upload - tech signs in once on this phone */
+const M=CONF.m365||{};const M365ON=!!(M.client_id&&M.site_url);let msalApp=null,driveId=null,syncing=false,lastErr="";
+const SAFE=t=>String(t||"").replace(/[^A-Za-z0-9._-]+/g,"_");
+const photoPath=(si,key,n)=>`photos/${String(si).padStart(2,"0")}_${key}/${A.id}_${key}_${String(n).padStart(2,"0")}.jpg`;
+const devFolder=()=>`${(M.root_folder||"Device Assessments").replace(/^\/+|\/+$/g,"")}/Devices/${SAFE((A.sn||"NO-SERIAL").toUpperCase())||"NO-SERIAL"}/${SAFE(A.id)}`;
+function cloudPending(){let n=0;for(const s of SECS)for(const p of (D.sections[s.key]||{photos:[]}).photos)if(!p.cloud)n++;return n}
+function cloudLine(){if(!M365ON||!A)return "";const all=SECS.reduce((a,s)=>a+((D.sections[s.key]||{photos:[]}).photos.length),0);const up=all-cloudPending();
+  if(!msalApp||!msalApp.getAllAccounts().length)return "☁ Not signed in to Office 365";
+  return `☁ ${up}/${all} photos on SharePoint${syncing?" - uploading…":""}${!navigator.onLine?" - offline, will upload when back online":""}${lastErr?" - "+lastErr:""}${D.submitted&&!cloudPending()?" - submitted ✓":""}`}
+function showCloud(){const c=$("#cloud");if(c)c.innerHTML=M365ON&&A?esc(cloudLine())+(msalApp&&!msalApp.getAllAccounts().length?' · <a href="#" id="signin" style="color:var(--y)">Sign in</a>':""):"";
+  const si=$("#signin");if(si)si.onclick=e=>{e.preventDefault();signIn()};const sm=$("#subMsg");if(sm)sm.textContent=cloudLine()}
+function loadMsal(){return new Promise((res,rej)=>{if(window.msal)return res();const sc=document.createElement("script");sc.src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@3.27.0/lib/msal-browser.min.js";sc.onload=()=>res();sc.onerror=()=>rej(new Error("Could not load Microsoft sign-in (no internet?)"));document.head.appendChild(sc)})}
+async function initMsal(){if(!M365ON)return;try{await loadMsal();msalApp=new msal.PublicClientApplication({auth:{clientId:M.client_id,authority:"https://login.microsoftonline.com/"+(M.tenant_id||"organizations"),redirectUri:location.origin+location.pathname},cache:{cacheLocation:"localStorage"}});
+  await msalApp.initialize();const r=await msalApp.handleRedirectPromise();if(r&&r.account)msalApp.setActiveAccount(r.account);else{const acc=msalApp.getAllAccounts();if(acc.length)msalApp.setActiveAccount(acc[0])}}catch(e){lastErr=e.message}showCloud()}
+const SCOPES=["Files.ReadWrite.All","Sites.ReadWrite.All"];
+async function signIn(){if(A)localStorage.setItem("circ_pendingA",A.id);await msalApp.loginRedirect({scopes:SCOPES,prompt:"select_account"})}
+async function token(){const acc=msalApp&&msalApp.getActiveAccount();if(!acc)throw new Error("not signed in");
+  try{return (await msalApp.acquireTokenSilent({scopes:SCOPES,account:acc})).accessToken}catch(e){if(A)localStorage.setItem("circ_pendingA",A.id);await msalApp.acquireTokenRedirect({scopes:SCOPES});throw e}}
+async function gfetch(path,opt={}){const t=await token();const r=await fetch(path.startsWith("http")?path:"https://graph.microsoft.com/v1.0"+path,Object.assign({},opt,{headers:Object.assign({Authorization:"Bearer "+t},opt.headers||{})}));
+  if(!r.ok){let m=r.status+"";try{m=(await r.json()).error.message}catch(e){}throw new Error(m)}return r.status===204?null:r.json()}
+async function drive(){if(driveId)return driveId;driveId=localStorage.getItem("circ_drive:"+M.site_url+"|"+M.library);if(driveId)return driveId;
+  const u=new URL(M.site_url);const site=await gfetch(`/sites/${u.hostname}:${u.pathname.replace(/\/$/,"")||"/"}`);const ds=(await gfetch(`/sites/${site.id}/drives`)).value||[];
+  const want=(M.library||"Documents").toLowerCase();const d=ds.find(x=>(x.name||"").toLowerCase()===want)||ds.find(x=>(x.webUrl||"").toLowerCase().includes(want))||ds[0];
+  if(!d)throw new Error("SharePoint library not found");driveId=d.id;localStorage.setItem("circ_drive:"+M.site_url+"|"+M.library,driveId);return driveId}
+const enc=p=>p.split("/").map(encodeURIComponent).join("/");
+async function put(path,blob,type){const d=await drive();return gfetch(`/drives/${d}/root:/${enc(path)}:/content`,{method:"PUT",body:blob,headers:{"Content-Type":type}})}
+async function cloudDelete(path){try{const d=await drive();await gfetch(`/drives/${d}/root:/${enc(devFolder()+"/"+path)}`,{method:"DELETE"})}catch(e){}}
+async function manifest(final){const man={format:"circularity-photos/1",assessment_id:A.id,serial:A.sn,model:A.m,technician:A.t,updated_at:new Date().toISOString(),submitted:!!(final||D.submitted),device:navigator.userAgent,sections:[]};
+  let si=0;for(const s of SECS){si++;const e=D.sections[s.key]||{photos:[]};man.sections.push({key:s.key,title:s.title,skipped:!!e.skipped&&!e.photos.length,skip_reason:e.skip_reason,notes:e.notes||"",
+    files:e.photos.filter(p=>p.cloud).map(p=>({name:p.cloud.split("/").pop(),path:p.cloud.replace(/^photos\//,""),taken_at:p.taken_at,bytes:p.bytes}))})}
+  return man}
+async function cloudSync(final){if(!M365ON||!A||!msalApp||!msalApp.getActiveAccount()){showCloud();if(final&&M365ON&&msalApp)signIn();return false}
+  if(!navigator.onLine){showCloud();return false}if(syncing)return false;syncing=true;lastErr="";showCloud();let ok=true;
+  try{let si=0;for(const s of SECS){si++;const e=D.sections[s.key]||{photos:[]};let k=0;for(const p of e.photos){k++;if(p.cloud)continue;const b=await getPhoto(p.id);if(!b)continue;
+      const rel=photoPath(si,s.key,p.n||k);await put(devFolder()+"/"+rel,b,"image/jpeg");p.cloud=rel;await saveState();showCloud()}}
+    await put(devFolder()+"/photos/manifest.json",new Blob([JSON.stringify(await manifest(final),null,1)]),"application/json")}
+  catch(err){ok=false;lastErr=err.message.slice(0,80)}syncing=false;showCloud();return ok&&!cloudPending()}
+addEventListener("online",()=>cloudSync(false));setInterval(()=>{if(cloudPending()&&navigator.onLine)cloudSync(false)},30000);
+
 async function link(a){A=a;const st=await loadState(a.id);D=st?st.D:{sections:{}};if(st&&!A.m)A=Object.assign({},st.A,a,{m:a.m||st.A.m});await saveState();view="intro";render()}
 
 (async()=>{const p=new URLSearchParams(location.hash.slice(1));const id=p.get("id");
-  if(id)await link({id,sn:p.get("sn")||"",m:p.get("m")||"",t:p.get("t")||""});else render()})();
+  if(id)localStorage.setItem("circ_lastA",JSON.stringify({id,sn:p.get("sn")||"",m:p.get("m")||"",t:p.get("t")||""}));
+  await initMsal();
+  if(id&&!location.hash.includes("code="))await link({id,sn:p.get("sn")||"",m:p.get("m")||"",t:p.get("t")||""});
+  else{const pend=localStorage.getItem("circ_pendingA");const last=JSON.parse(localStorage.getItem("circ_lastA")||"null");localStorage.removeItem("circ_pendingA");
+    if(pend&&last&&last.id===pend){await link(last);history.replaceState(null,"","#id="+encodeURIComponent(last.id)+"&sn="+encodeURIComponent(last.sn||""))}else render()}
+  if(M365ON&&A&&msalApp&&!msalApp.getAllAccounts().length)toast("Sign in to Office 365 once on this phone so photos go to SharePoint");
+  cloudSync(false)})();
 </script>
 </body>
 </html>
